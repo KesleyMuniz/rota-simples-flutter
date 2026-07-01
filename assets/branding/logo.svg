@@ -1,0 +1,24 @@
+<svg width="333" height="179" viewBox="176 100 333 179" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pin body -->
+  <ellipse cx="340" cy="148" rx="38" ry="38" fill="#00C2A8"/>
+
+  <!-- Pin inner circle -->
+  <circle cx="340" cy="148" r="15" fill="#ffffff"/>
+
+  <!-- Pin tail -->
+  <path d="M318 178 Q340 218 362 178" fill="#00C2A8"/>
+
+  <!-- Route dots -->
+  <circle cx="195" cy="260" r="9" fill="#00C2A8"/>
+  <circle cx="280" cy="220" r="7" fill="#00C2A8" opacity="0.7"/>
+  <circle cx="340" cy="240" r="9" fill="#0D1217"/>
+  <circle cx="410" cy="215" r="7" fill="#00C2A8" opacity="0.7"/>
+  <circle cx="490" cy="255" r="9" fill="#00C2A8"/>
+
+  <!-- Curved dashed path -->
+  <path d="M195 260 C230 230 260 215 280 220 C300 225 320 240 340 240 C360 240 385 215 410 215 C435 215 460 240 490 255"
+        fill="none" stroke="#00C2A8" stroke-width="2.5" stroke-dasharray="6 4" opacity="0.5"/>
+
+  <!-- Checkmark on destination -->
+  <path d="M483 255 L488 261 L498 249" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -7,7 +7,6 @@ class RSSpacing {
   static const double lg = 18;
   static const double xl = 22;
   static const double xxl = 32;
-  static const double xxxl = 62;
 
   static const double cardGap = 10;
   static const double sectionGap = 20;

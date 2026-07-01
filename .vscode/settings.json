@@ -1,4 +1,14 @@
 {
+  // Os testes ficam dentro de lib/ e são rodados pelo terminal
+  // (flutter test). O painel Testing do VS Code não roda testes de
+  // widget fora de test/, então mantemos a descoberta desligada para
+  // ele não listar testes que não consegue executar.
+  "dart.allowTestsOutsideTestFolder": false,
+
+  // O agregador gerado (test/aggregate) existe só para o `flutter test`
+  // da raiz; fica fora da análise para não poluir o editor.
+  "dart.analysisExcludedFolders": ["test/aggregate"],
+
   // Formatação
   "[dart]": {
     "editor.formatOnSave": true,

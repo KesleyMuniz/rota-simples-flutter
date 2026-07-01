@@ -72,7 +72,7 @@ class _LoginScreenPageState extends State<LoginScreenPage> {
 
                   Padding(
                     padding: const EdgeInsets.only(
-                      top: RSSpacing.xxxl,
+                      top: RSSpacing.xxl,
                       bottom: RSSpacing.md,
                     ),
                     child: RSInlineLink(

@@ -8,6 +8,8 @@ class RSSizes {
   static const double iconButton = 38; // botão voltar (top bar)
   static const double appIconSize = 46;
   static const double navBarHeight = 84;
+  static const int bottomFlexSize = 14;
+  static const int bottomFlexSizeSm = 10; // para telas menores, como iPhone SE
 
   // Containers circulares de ícone (estados de destaque)
   static const double iconBadge = 66; // ex.: cadeado

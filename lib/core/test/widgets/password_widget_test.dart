@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rotasimples/features/auth/login/presentation/widget/password_widget.dart';
+import 'package:rotasimples/core/widgets/password_widget.dart';
 
 void main() {
   Future<void> pumpWidget(

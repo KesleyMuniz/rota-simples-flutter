@@ -4,13 +4,18 @@ import '../design_system.dart';
 
 /// Top bar com botão voltar + título, com borda inferior sutil.
 ///
-/// Feita para ser o primeiro item de uma Column de tela (não é um AppBar);
-/// abaixo dela vem a área de conteúdo scrollável.
-class RSTopBar extends StatelessWidget {
+/// Implementa [PreferredSizeWidget] para poder ser usada como `appBar` de um
+/// [Scaffold].
+class RSTopBar extends StatelessWidget implements PreferredSizeWidget {
   const RSTopBar({super.key, required this.title, this.onBack});
 
   final String title;
   final VoidCallback? onBack;
+
+  static const double _contentHeight = 60;
+
+  @override
+  Size get preferredSize => const Size.fromHeight(_contentHeight);
 
   @override
   Widget build(BuildContext context) {

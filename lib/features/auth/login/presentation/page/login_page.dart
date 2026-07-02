@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rotasimples/core/design_system/design_system.dart';
 import 'package:rotasimples/core/routes/routes.dart';
-import 'package:rotasimples/features/auth/login/presentation/widget/email_widget.dart';
-import 'package:rotasimples/features/auth/login/presentation/widget/password_widget.dart';
+import 'package:rotasimples/core/widgets/email_widget.dart';
+import 'package:rotasimples/core/widgets/password_widget.dart';
 
 class LoginScreenPage extends StatefulWidget {
   const LoginScreenPage({super.key});
@@ -60,6 +60,7 @@ class _LoginScreenPageState extends State<LoginScreenPage> {
                       const SizedBox(height: RSSpacing.xxl),
                       RSButton(
                         label: 'ENTRAR',
+                        // TODO(KGM): Implement login functionality
                         onPressed: canSubmit
                             ? () => Navigator.of(
                                 context,

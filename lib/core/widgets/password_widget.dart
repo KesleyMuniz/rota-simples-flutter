@@ -2,10 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:rotasimples/core/design_system/design_system.dart';
 import 'package:rotasimples/core/utils/validators.dart';
 
+enum PasswordFieldType { current, create, confirm }
+
 class PasswordWidget extends StatefulWidget {
-  const PasswordWidget({super.key, this.onValidityChanged});
+  const PasswordWidget({
+    super.key,
+    this.onValidityChanged,
+    this.onChanged,
+    this.label,
+    this.hint,
+    this.showRules,
+    this.type = PasswordFieldType.create,
+    this.matchValue,
+  });
 
   final ValueChanged<bool>? onValidityChanged;
+  final ValueChanged<String>? onChanged;
+  final String? label;
+  final String? hint;
+  final bool? showRules;
+  final PasswordFieldType type;
+
+  /// Valor que a senha precisa igualar quando [type] é [PasswordFieldType.confirm].
+  final String? matchValue;
 
   @override
   State<PasswordWidget> createState() => _PasswordWidgetState();
@@ -23,6 +42,17 @@ class _PasswordWidgetState extends State<PasswordWidget> {
   }
 
   @override
+  void didUpdateWidget(covariant PasswordWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.type == PasswordFieldType.confirm &&
+        oldWidget.matchValue != widget.matchValue) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _notifyValidity();
+      });
+    }
+  }
+
+  @override
   void dispose() {
     _focusNode.removeListener(_handleFocusChange);
     _focusNode.dispose();
@@ -35,7 +65,17 @@ class _PasswordWidgetState extends State<PasswordWidget> {
 
   void _validate(String value) {
     setState(() => _value = value);
-    final (isValid, _) = Validators.password(value);
+    widget.onChanged?.call(value);
+    _notifyValidity();
+  }
+
+  void _notifyValidity() {
+    final isValid = switch (widget.type) {
+      PasswordFieldType.current => _value.isNotEmpty,
+      PasswordFieldType.create => Validators.password(_value).$1,
+      PasswordFieldType.confirm =>
+        _value.isNotEmpty && _value == widget.matchValue,
+    };
     widget.onValidityChanged?.call(isValid);
   }
 
@@ -62,13 +102,13 @@ class _PasswordWidgetState extends State<PasswordWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         RSInput(
-          label: 'SENHA',
-          hint: 'Sua senha',
+          label: widget.label ?? 'SENHA',
+          hint: widget.hint ?? 'Sua senha',
           obscureText: true,
           focusNode: _focusNode,
           onChanged: _validate,
         ),
-        if (_showRules) ...[
+        if (_showRules && widget.showRules == true) ...[
           const SizedBox(height: RSSpacing.xs),
           for (final (label, passes) in rules)
             Text(

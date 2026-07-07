@@ -21,7 +21,8 @@ import 'package:rotasimples/features/auth/test/forgot_password/presentation/page
 import 'package:rotasimples/features/auth/test/forgot_password/presentation/widget/header_test.dart' as t14;
 import 'package:rotasimples/features/auth/test/login/presentation/page/login_page_test.dart' as t15;
 import 'package:rotasimples/features/auth/test/login/presentation/widget/bottom_button_test.dart' as t16;
-import 'package:rotasimples/features/auth/test/signup/presentation/page/signup_page_test.dart' as t17;
+import 'package:rotasimples/features/auth/test/reset_password/presentation/page/reset_password_page_test.dart' as t17;
+import 'package:rotasimples/features/auth/test/signup/presentation/page/signup_page_test.dart' as t18;
 
 void main() {
   group('core/test/design_system/theme/rs_theme_test.dart', t0.main);
@@ -41,5 +42,6 @@ void main() {
   group('features/auth/test/forgot_password/presentation/widget/header_test.dart', t14.main);
   group('features/auth/test/login/presentation/page/login_page_test.dart', t15.main);
   group('features/auth/test/login/presentation/widget/bottom_button_test.dart', t16.main);
-  group('features/auth/test/signup/presentation/page/signup_page_test.dart', t17.main);
+  group('features/auth/test/reset_password/presentation/page/reset_password_page_test.dart', t17.main);
+  group('features/auth/test/signup/presentation/page/signup_page_test.dart', t18.main);
 }

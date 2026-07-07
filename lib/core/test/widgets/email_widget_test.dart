@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rotasimples/features/auth/login/presentation/widget/email_widget.dart';
+import 'package:rotasimples/core/widgets/email_widget.dart';
 
 void main() {
   Future<bool?> pumpAndType(WidgetTester tester, String text) async {

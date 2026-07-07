@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rotasimples/core/routes/routes.dart';
+import 'package:rotasimples/core/widgets/email_widget.dart';
+import 'package:rotasimples/core/widgets/password_widget.dart';
 import 'package:rotasimples/features/auth/login/presentation/page/login_page.dart';
-import 'package:rotasimples/features/auth/login/presentation/widget/email_widget.dart';
-import 'package:rotasimples/features/auth/login/presentation/widget/password_widget.dart';
 
 /// Observa os pushes nomeados para verificar a navegação disparada pela tela.
 class _RouteObserver extends NavigatorObserver {

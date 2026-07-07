@@ -15,12 +15,6 @@ class RSType {
   static TextStyle sectionLabel({Color color = RSColors.textTertiary}) =>
       GoogleFonts.sora(fontSize: 11, fontWeight: FontWeight.w600, color: color, letterSpacing: 0.8);
 
-  static TextStyle appBarTitle({Color color = RSColors.textPrimary}) =>
-      GoogleFonts.sora(fontSize: 18, fontWeight: FontWeight.w700, color: color);
-
-  static TextStyle title({Color color = RSColors.textPrimary}) =>
-      GoogleFonts.sora(fontSize: 20, fontWeight: FontWeight.w700, color: color);
-
   // Body / UI — Manrope
   static TextStyle cta({Color color = RSColors.bgApp}) =>
       GoogleFonts.manrope(fontSize: 17, fontWeight: FontWeight.w700, color: color);
@@ -36,10 +30,4 @@ class RSType {
 
   static TextStyle navLabel({Color color = RSColors.textTertiary}) =>
       GoogleFonts.manrope(fontSize: 10.5, fontWeight: FontWeight.w500, color: color);
-
-  static TextStyle alert({Color color = RSColors.warningText}) =>
-      GoogleFonts.manrope(fontSize: 13, fontWeight: FontWeight.w600, color: color);
-
-  static TextStyle errorMessage({Color color = RSColors.errorText}) =>
-      GoogleFonts.manrope(fontSize: 12.5, fontWeight: FontWeight.w600, color: color);
 }

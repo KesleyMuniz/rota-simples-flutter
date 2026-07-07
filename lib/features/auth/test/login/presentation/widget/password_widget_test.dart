@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rotasimples/core/widgets/password_widget.dart';
+import 'package:rotasimples/features/auth/login/presentation/widget/password_widget.dart';
 
 void main() {
   Future<void> pumpWidget(
     WidgetTester tester, {
     ValueChanged<bool>? onValidityChanged,
-    bool? showRules,
   }) {
     return tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: PasswordWidget(
-            onValidityChanged: onValidityChanged,
-            showRules: showRules,
-          ),
+          body: PasswordWidget(onValidityChanged: onValidityChanged),
         ),
       ),
     );
@@ -30,7 +26,7 @@ void main() {
     testWidgets('as regras só aparecem quando o campo recebe foco', (
       tester,
     ) async {
-      await pumpWidget(tester, showRules: true);
+      await pumpWidget(tester);
 
       expect(find.textContaining('6 a 20 caracteres'), findsNothing);
 

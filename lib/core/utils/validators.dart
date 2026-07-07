@@ -6,21 +6,6 @@ class Validators {
     caseSensitive: false,
   );
 
-  static final RegExp _nameRegExp = RegExp(
-    r'^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:\s+[A-Za-zÀ-ÖØ-öø-ÿ]+)+$',
-    caseSensitive: false,
-  );
-
-  static bool? name(String? value) {
-    if (value == null || value.trim().isEmpty) {
-      return false;
-    }
-    if (!_nameRegExp.hasMatch(value.trim())) {
-      return false;
-    }
-    return null;
-  }
-
   static bool? email(String? value) {
     if (value == null || value.trim().isEmpty) {
       return false;
@@ -84,6 +69,4 @@ class Validators {
     }
     return false;
   }
-
-
 }

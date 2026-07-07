@@ -13,16 +13,10 @@ import 'package:rotasimples/core/test/design_system/widgets/rs_inline_link_test.
 import 'package:rotasimples/core/test/design_system/widgets/rs_input_test.dart' as t6;
 import 'package:rotasimples/core/test/design_system/widgets/rs_logo_test.dart' as t7;
 import 'package:rotasimples/core/test/routes/app_routes_test.dart' as t8;
-import 'package:rotasimples/core/test/utils/validators_name_test.dart' as t9;
-import 'package:rotasimples/core/test/widgets/email_widget_test.dart' as t10;
-import 'package:rotasimples/core/test/widgets/name_widget_test.dart' as t11;
-import 'package:rotasimples/core/test/widgets/password_widget_test.dart' as t12;
-import 'package:rotasimples/features/auth/test/forgot_password/presentation/page/forgot_password_page_test.dart' as t13;
-import 'package:rotasimples/features/auth/test/forgot_password/presentation/widget/header_test.dart' as t14;
-import 'package:rotasimples/features/auth/test/login/presentation/page/login_page_test.dart' as t15;
-import 'package:rotasimples/features/auth/test/login/presentation/widget/bottom_button_test.dart' as t16;
-import 'package:rotasimples/features/auth/test/reset_password/presentation/page/reset_password_page_test.dart' as t17;
-import 'package:rotasimples/features/auth/test/signup/presentation/page/signup_page_test.dart' as t18;
+import 'package:rotasimples/features/auth/test/login/presentation/page/login_page_test.dart' as t9;
+import 'package:rotasimples/features/auth/test/login/presentation/widget/bottom_button_test.dart' as t10;
+import 'package:rotasimples/features/auth/test/login/presentation/widget/email_widget_test.dart' as t11;
+import 'package:rotasimples/features/auth/test/login/presentation/widget/password_widget_test.dart' as t12;
 
 void main() {
   group('core/test/design_system/theme/rs_theme_test.dart', t0.main);
@@ -34,14 +28,8 @@ void main() {
   group('core/test/design_system/widgets/rs_input_test.dart', t6.main);
   group('core/test/design_system/widgets/rs_logo_test.dart', t7.main);
   group('core/test/routes/app_routes_test.dart', t8.main);
-  group('core/test/utils/validators_name_test.dart', t9.main);
-  group('core/test/widgets/email_widget_test.dart', t10.main);
-  group('core/test/widgets/name_widget_test.dart', t11.main);
-  group('core/test/widgets/password_widget_test.dart', t12.main);
-  group('features/auth/test/forgot_password/presentation/page/forgot_password_page_test.dart', t13.main);
-  group('features/auth/test/forgot_password/presentation/widget/header_test.dart', t14.main);
-  group('features/auth/test/login/presentation/page/login_page_test.dart', t15.main);
-  group('features/auth/test/login/presentation/widget/bottom_button_test.dart', t16.main);
-  group('features/auth/test/reset_password/presentation/page/reset_password_page_test.dart', t17.main);
-  group('features/auth/test/signup/presentation/page/signup_page_test.dart', t18.main);
+  group('features/auth/test/login/presentation/page/login_page_test.dart', t9.main);
+  group('features/auth/test/login/presentation/widget/bottom_button_test.dart', t10.main);
+  group('features/auth/test/login/presentation/widget/email_widget_test.dart', t11.main);
+  group('features/auth/test/login/presentation/widget/password_widget_test.dart', t12.main);
 }

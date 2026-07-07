@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../design_system.dart';
 
@@ -15,6 +16,7 @@ class RSInput extends StatelessWidget {
     this.keyboardType,
     this.suffixIcon,
     this.enabled = true,
+    this.inputFormatters,
   });
 
   final String label;
@@ -27,6 +29,7 @@ class RSInput extends StatelessWidget {
   final TextInputType? keyboardType;
   final Widget? suffixIcon;
   final bool enabled;
+  final List<TextInputFormatter>? inputFormatters;
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +49,7 @@ class RSInput extends StatelessWidget {
           child: TextField(
             controller: controller,
             focusNode: focusNode,
+            inputFormatters: inputFormatters,
             onChanged: onChanged,
             obscureText: obscureText,
             keyboardType: keyboardType,

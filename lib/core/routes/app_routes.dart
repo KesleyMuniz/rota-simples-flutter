@@ -6,7 +6,7 @@ import '../../features/auth/login/login_route.dart';
 import '../../features/auth/login/presentation/page/login_page.dart';
 import '../../features/auth/reset_password/presentation/page/reset_password_page.dart';
 import '../../features/auth/reset_password/reset_password_route.dart';
-import '../../features/auth/signup/presentation/signup_screen.dart';
+import '../../features/auth/signup/presentation/page/signup_page.dart';
 import '../../features/auth/signup/signup_route.dart';
 import '../../features/auth/splash/presentation/splash_screen.dart';
 import '../../features/auth/splash/splash_route.dart';
@@ -44,7 +44,7 @@ class AppRoutes {
     return switch (settings.name) {
       SplashRoute.route => _build(const SplashScreen()),
       LoginRoute.route => _build(const LoginScreenPage()),
-      SignupRoute.route => _build(const SignupScreen()),
+      SignupRoute.route => _build(const SignupPage()),
       ForgotPasswordRoute.route => _build(const ForgotPasswordPage()),
       ResetPasswordRoute.route => _build(const ResetPasswordPage()),
       HomeRoute.route => _build(const HomeScreen()),

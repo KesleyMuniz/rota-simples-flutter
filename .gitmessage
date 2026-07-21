@@ -1,0 +1,21 @@
+# <tipo>(<escopo>): <descrição no imperativo, minúscula, sem ponto final>
+# |<---- ideal até 50, máx 72 ---->|
+
+# Corpo: o QUÊ e o PORQUÊ (não o como). Quebre em 72 colunas.
+
+
+# Rodapé: BREAKING CHANGE: ...  |  refs #issue
+
+# --- Tipos ---
+# feat     nova funcionalidade
+# fix      correção de bug
+# chore    build, deps, config, tooling
+# docs     documentação
+# style    formatação, sem mudança de lógica
+# refactor refatoração sem mudar comportamento
+# test     testes
+# perf     performance
+#
+# --- Escopos ---
+# auth  route-planning  delivery  history  profile
+# subscription  design-system  core

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../design_system.dart';
 
 class RSInlineLink extends StatelessWidget {
@@ -24,7 +25,9 @@ class RSInlineLink extends StatelessWidget {
           onTap: onTap,
           child: Text(
             actionLabel,
-            style: RSType.body(color: RSColors.accent).copyWith(fontWeight: FontWeight.bold),
+            style: RSType.body(
+              color: RSColors.accent,
+            ).copyWith(fontWeight: FontWeight.w900),
           ),
         ),
       ],

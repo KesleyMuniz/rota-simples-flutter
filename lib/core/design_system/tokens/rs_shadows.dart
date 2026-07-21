@@ -19,6 +19,14 @@ class RSShadows {
     ),
   ];
 
+  static const List<BoxShadow> ctaAccentSm = [
+    BoxShadow(
+      color: Color(0x4D00C2A8),
+      blurRadius: 16,
+      offset: Offset(0, 6),
+    ),
+  ];
+
   static const List<BoxShadow> ctaError = [
     BoxShadow(
       color: Color(0x57FF5A5F),
